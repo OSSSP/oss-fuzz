@@ -21,7 +21,7 @@ MAINTAINER randy408@protonmail.com
 
 RUN apt-get update && apt-get install -y cmake pkg-config zlib1g-dev liblzma-dev
 
-RUN git clone --depth 1 https://github.com/nih-at/libzip.git
+RUN git clone --depth 1  https://github.com/nih-at/libzip.git
 
 WORKDIR libzip
 COPY build.sh $SRC/

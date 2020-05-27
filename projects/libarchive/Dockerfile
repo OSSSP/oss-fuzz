@@ -23,6 +23,6 @@ RUN apt-get update && apt-get install -y make autoconf automake libtool pkg-conf
         libbz2-dev liblzo2-dev liblzma-dev liblz4-dev libz-dev \
         libxml2-dev libssl-dev libacl1-dev libattr1-dev lrzip \
 	liblz4-tool lzop zstd lcab genisoimage jlha-utils rar default-jdk
-RUN git clone --depth 1 https://github.com/libarchive/libarchive.git
+RUN git clone --depth 1  https://github.com/libarchive/libarchive.git
 WORKDIR libarchive
 COPY build.sh libarchive_fuzzer.cc $SRC/

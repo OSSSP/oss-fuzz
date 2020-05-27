@@ -22,6 +22,6 @@ RUN apt-get install -y autoconf automake libtool curl make g++ unzip wget git \
     pkg-config
 
 # Get LLVM
-RUN git clone --depth 1 https://github.com/llvm/llvm-project.git
+RUN git clone --depth 1  https://github.com/llvm/llvm-project.git
 
 COPY build.sh $SRC/

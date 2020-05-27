@@ -19,7 +19,7 @@ MAINTAINER hhan@redhat.com
 RUN apt-get update && apt-get install -y libreadline-dev libselinux1-dev \
     libxml2-dev make autoconf automake libtool pkg-config bison flex
 
-RUN git clone --depth 1 https://github.com/hercules-team/augeas
+RUN git clone --depth 1  https://github.com/hercules-team/augeas
 WORKDIR augeas
 
 COPY build.sh $SRC/

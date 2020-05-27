@@ -18,13 +18,13 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER p.antoine@catenacyber.fr
 RUN apt-get update && apt-get install -y make autoconf automake libtool gettext bzip2 gnupg bison flex
 
-RUN git clone --depth 1 git://git.gnupg.org/libgpg-error.git libgpg-error
-RUN git clone --depth 1 git://git.gnupg.org/libgcrypt.git libgcrypt
-RUN git clone --depth 1 git://git.gnupg.org/libassuan.git libassuan
-RUN git clone --depth 1 git://git.gnupg.org/libksba.git libksba
-RUN git clone --depth 1 git://git.gnupg.org/npth.git npth
+RUN git clone --depth 1  git://git.gnupg.org/libgpg-error.git libgpg-error
+RUN git clone --depth 1  git://git.gnupg.org/libgcrypt.git libgcrypt
+RUN git clone --depth 1  git://git.gnupg.org/libassuan.git libassuan
+RUN git clone --depth 1  git://git.gnupg.org/libksba.git libksba
+RUN git clone --depth 1  git://git.gnupg.org/npth.git npth
 
-RUN git clone --depth 1 git://git.gnupg.org/gnupg.git gnupg
+RUN git clone --depth 1  git://git.gnupg.org/gnupg.git gnupg
 
 WORKDIR gnupg
 COPY fuzzgnupg.diff $SRC/fuzz.diff

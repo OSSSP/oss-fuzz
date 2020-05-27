@@ -24,18 +24,18 @@ RUN apt-get update && apt-get install -y make autoconf automake libtool build-es
     pkg-config texinfo libbz2-dev zlib1g-dev yasm cmake mercurial wget \
     xutils-dev libpciaccess-dev nasm
 
-RUN git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+RUN git clone --depth 1  https://git.ffmpeg.org/ffmpeg.git ffmpeg
 
 RUN wget https://www.alsa-project.org/files/pub/lib/alsa-lib-1.1.0.tar.bz2
-RUN git clone --depth 1 https://github.com/mstorsjo/fdk-aac.git
-RUN git clone --depth 1 git://anongit.freedesktop.org/xorg/lib/libXext
-RUN git clone --depth 1 git://anongit.freedesktop.org/git/xorg/lib/libXfixes
-RUN git clone --depth 1 https://github.com/01org/libva
-RUN git clone --depth 1 -b libvdpau-1.2 git://people.freedesktop.org/~aplattner/libvdpau
-RUN git clone --depth 1 https://chromium.googlesource.com/webm/libvpx
-RUN git clone --depth 1 https://gitlab.xiph.org/xiph/ogg.git
-RUN git clone --depth 1 https://gitlab.xiph.org/xiph/opus.git
-RUN git clone --depth 1 https://gitlab.xiph.org/xiph/theora.git
-RUN git clone --depth 1 https://gitlab.xiph.org/xiph/vorbis.git
+RUN git clone --depth 1  https://github.com/mstorsjo/fdk-aac.git
+RUN git clone --depth 1  git://anongit.freedesktop.org/xorg/lib/libXext
+RUN git clone --depth 1  git://anongit.freedesktop.org/git/xorg/lib/libXfixes
+RUN git clone --depth 1  https://github.com/01org/libva
+RUN git clone --depth 1  -b libvdpau-1.2 git://people.freedesktop.org/~aplattner/libvdpau
+RUN git clone --depth 1  https://chromium.googlesource.com/webm/libvpx
+RUN git clone --depth 1  https://gitlab.xiph.org/xiph/ogg.git
+RUN git clone --depth 1  https://gitlab.xiph.org/xiph/opus.git
+RUN git clone --depth 1  https://gitlab.xiph.org/xiph/theora.git
+RUN git clone --depth 1  https://gitlab.xiph.org/xiph/vorbis.git
 
 COPY build.sh group_seed_corpus.py $SRC/

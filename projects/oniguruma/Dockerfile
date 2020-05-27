@@ -18,7 +18,7 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER kkosako0@gmail.com
 
 RUN apt-get update && apt-get install -y make autoconf automake libtool
-RUN git clone --depth 1 https://github.com/kkos/oniguruma.git oniguruma
+RUN git clone --depth 1  https://github.com/kkos/oniguruma.git oniguruma
 
 WORKDIR oniguruma
 COPY build.sh $SRC/

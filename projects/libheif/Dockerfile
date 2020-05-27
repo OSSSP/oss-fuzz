@@ -29,8 +29,8 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     yasm
 
-RUN git clone \
-    --depth 1 \
+RUN git clone --depth 1  \
+     \
     --branch master \
     https://github.com/strukturag/libde265.git \
     libde265
@@ -40,8 +40,8 @@ RUN hg clone \
     http://hg.videolan.org/x265 \
     x265
 
-RUN git clone \
-    --depth 1 \
+RUN git clone --depth 1  \
+     \
     --branch master \
     https://github.com/strukturag/libheif.git \
     libheif

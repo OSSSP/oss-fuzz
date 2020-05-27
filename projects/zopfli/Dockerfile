@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER lode@google.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool
-RUN git clone --depth 1 https://github.com/google/zopfli
+RUN git clone --depth 1  https://github.com/google/zopfli
 WORKDIR zopfli
 COPY build.sh *.cc $SRC/

@@ -20,11 +20,11 @@ RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y make autoconf automake libtool g++ sqlite3 pkg-config
 
-RUN git clone --depth 1 https://github.com/OSGeo/proj proj
+RUN git clone --depth 1  https://github.com/OSGeo/proj proj
 
-RUN git clone --depth 1 https://github.com/curl/curl.git proj/curl
+RUN git clone --depth 1  https://github.com/curl/curl.git proj/curl
 
-RUN git clone --depth 1 https://gitlab.com/libtiff/libtiff.git proj/libtiff
+RUN git clone --depth 1  https://gitlab.com/libtiff/libtiff.git proj/libtiff
 
 WORKDIR proj
 

@@ -17,11 +17,11 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER jonathan@titanous.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool pkg-config cmake
-RUN git clone --depth 1 https://anongit.freedesktop.org/git/poppler/poppler.git
-RUN git clone --depth 1 git://git.sv.nongnu.org/freetype/freetype2.git
-RUN git clone --depth 1 https://github.com/mm2/Little-CMS.git
-RUN git clone --depth 1 https://github.com/uclouvain/openjpeg
-RUN git clone --depth 1 https://github.com/mozilla/pdf.js pdf.js && \
+RUN git clone --depth 1  https://anongit.freedesktop.org/git/poppler/poppler.git
+RUN git clone --depth 1  git://git.sv.nongnu.org/freetype/freetype2.git
+RUN git clone --depth 1  https://github.com/mm2/Little-CMS.git
+RUN git clone --depth 1  https://github.com/uclouvain/openjpeg
+RUN git clone --depth 1  https://github.com/mozilla/pdf.js pdf.js && \
     zip -q $SRC/pdf_fuzzer_seed_corpus.zip pdf.js/test/pdfs/*.pdf && \
     rm -rf pdf.js
 ADD https://raw.githubusercontent.com/rc0r/afl-fuzz/master/dictionaries/pdf.dict $SRC/pdf_fuzzer.dict

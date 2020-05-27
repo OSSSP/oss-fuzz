@@ -29,13 +29,13 @@ RUN apt-get update && apt-get install -y \
   glib2.0-dev
 RUN mkdir afl-testcases
 RUN curl https://lcamtuf.coredump.cx/afl/demo/afl_testcases.tgz | tar xzC afl-testcases
-RUN git clone --depth 1 https://github.com/libvips/libvips
-RUN git clone --depth 1 https://github.com/madler/zlib.git
-RUN git clone --depth 1 https://github.com/libexif/libexif
-RUN git clone --depth 1 https://github.com/libjpeg-turbo/libjpeg-turbo
-RUN git clone --depth 1 https://github.com/glennrp/libpng.git
-RUN git clone --depth 1 https://git.code.sf.net/p/giflib/code libgif
-RUN git clone --depth 1 https://chromium.googlesource.com/webm/libwebp
-RUN git clone --depth 1 https://gitlab.com/libtiff/libtiff 
+RUN git clone --depth 1  https://github.com/libvips/libvips
+RUN git clone --depth 1  https://github.com/madler/zlib.git
+RUN git clone --depth 1  https://github.com/libexif/libexif
+RUN git clone --depth 1  https://github.com/libjpeg-turbo/libjpeg-turbo
+RUN git clone --depth 1  https://github.com/glennrp/libpng.git
+RUN git clone --depth 1  https://git.code.sf.net/p/giflib/code libgif
+RUN git clone --depth 1  https://chromium.googlesource.com/webm/libwebp
+RUN git clone --depth 1  https://gitlab.com/libtiff/libtiff 
 WORKDIR libvips
 COPY build.sh $SRC/

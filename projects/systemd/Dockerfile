@@ -21,6 +21,6 @@ RUN apt-get update &&\
         libcap-dev libmount-dev libkmod-dev \
         pkg-config wget &&\
     pip3 install meson ninja
-RUN git clone --depth 1 https://github.com/systemd/systemd systemd
+RUN git clone --depth 1  https://github.com/systemd/systemd systemd
 WORKDIR systemd
 COPY build.sh $SRC/

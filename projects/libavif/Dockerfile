@@ -24,7 +24,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y curl python3-pip python3-setuptools python3-wheel cmake git && \
     pip3 install meson ninja
 
-RUN git clone --depth 1 https://github.com/AOMediaCodec/libavif.git libavif
+RUN git clone --depth 1  https://github.com/AOMediaCodec/libavif.git libavif
 WORKDIR libavif
 
 RUN curl -L https://download.videolan.org/contrib/nasm/nasm-2.14.tar.gz | tar xvz

@@ -102,21 +102,21 @@ RUN wget -q --show-progress --progress=bar:force \
     https://sourceforge.net/projects/libebook/files/corpus/fb2fuzzer_seed_corpus.zip \
     -P $SRC
 # clone sources
-RUN git clone --depth 1 git://git.code.sf.net/p/libwpd/librevenge
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libmspub
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libcdr
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libvisio
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libzmf
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libpagemaker
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libfreehand
-RUN git clone --depth 1 git://git.code.sf.net/p/libwpd/code libwpd
-RUN git clone --depth 1 git://git.code.sf.net/p/libwpg/code libwpg
-RUN git clone --depth 1 https://github.com/fosnola/libstaroffice
-RUN git clone --depth 1 git://git.code.sf.net/p/libwps/code libwps
-RUN git clone --depth 1 git://git.code.sf.net/p/libmwaw/libmwaw
-RUN git clone --depth 1 git://git.code.sf.net/p/libebook/code libe-book
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libabw
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libetonyek
-RUN git clone --depth 1 git://gerrit.libreoffice.org/libqxp
+RUN git clone --depth 1  git://git.code.sf.net/p/libwpd/librevenge
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libmspub
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libcdr
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libvisio
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libzmf
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libpagemaker
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libfreehand
+RUN git clone --depth 1  git://git.code.sf.net/p/libwpd/code libwpd
+RUN git clone --depth 1  git://git.code.sf.net/p/libwpg/code libwpg
+RUN git clone --depth 1  https://github.com/fosnola/libstaroffice
+RUN git clone --depth 1  git://git.code.sf.net/p/libwps/code libwps
+RUN git clone --depth 1  git://git.code.sf.net/p/libmwaw/libmwaw
+RUN git clone --depth 1  git://git.code.sf.net/p/libebook/code libe-book
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libabw
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libetonyek
+RUN git clone --depth 1  git://gerrit.libreoffice.org/libqxp
 WORKDIR $SRC
 COPY build.sh *.options *.patch $SRC/

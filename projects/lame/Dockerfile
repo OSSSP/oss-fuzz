@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER guidovranken@gmail.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool subversion
-RUN git clone --depth 1 https://github.com/guidovranken/LAME-fuzzers
+RUN git clone --depth 1  https://github.com/guidovranken/LAME-fuzzers
 RUN svn checkout https://svn.code.sf.net/p/lame/svn/trunk/lame $SRC/lame
 COPY build.sh $SRC/

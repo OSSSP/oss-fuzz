@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER fyffe@google.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool
-RUN git clone --depth 1 https://github.com/guidovranken/gfwx-fuzzers.git gfwx-fuzzers
+RUN git clone --depth 1  https://github.com/guidovranken/gfwx-fuzzers.git gfwx-fuzzers
 WORKDIR gfwx-fuzzers
 COPY build.sh $SRC/

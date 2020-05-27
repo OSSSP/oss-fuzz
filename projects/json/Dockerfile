@@ -18,6 +18,6 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER vitalybuka@chromium.org
 RUN apt-get update && apt-get install -y binutils make
 
-RUN git clone --depth 1 -b develop https://github.com/nlohmann/json.git
+RUN git clone --depth 1  -b develop https://github.com/nlohmann/json.git
 WORKDIR json/
 COPY build.sh *.options $SRC/

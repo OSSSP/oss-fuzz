@@ -86,7 +86,7 @@ RUN wget --quiet --show-progress --progress=dot:giga "https://github.com/troydha
         && cp uthash-${uthash}/src/*.h /usr/include/
 RUN rm -rf uthash-${uthash}/ v${uthash}.tar.gz
 
-RUN git clone --depth 1 \
+RUN git clone --depth 1  \
   https://github.com/tpm2-software/tpm2-tss $SRC/tpm2-tss/
 WORKDIR $SRC/tpm2-tss/
 COPY build.sh $SRC/

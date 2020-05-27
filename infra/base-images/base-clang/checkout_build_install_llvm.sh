@@ -44,7 +44,7 @@ function clone_with_retries {
 # Use chromium's clang revision
 mkdir $SRC/chromium_tools
 cd $SRC/chromium_tools
-git clone https://chromium.googlesource.com/chromium/src/tools/clang
+git clone  https://chromium.googlesource.com/chromium/src/tools/clang
 cd clang
 
 LLVM_SRC=$SRC/llvm-project

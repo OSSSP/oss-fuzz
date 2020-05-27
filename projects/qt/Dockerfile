@@ -18,10 +18,10 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER rlohningqt@gmail.com
 RUN dpkg --add-architecture i386
 RUN apt-get update && apt-get install -y libc6-dev:i386
-RUN git clone --branch 5.15 --depth 1 git://code.qt.io/qt/qt5.git qt
+RUN git clone --depth 1  --branch 5.15  git://code.qt.io/qt/qt5.git qt
 WORKDIR qt
-RUN git submodule update --init --depth 1 qtbase
+RUN git submodule update --init  qtbase
 WORKDIR $SRC
-RUN git clone --depth 1 git://code.qt.io/qt/qtqa.git
-RUN git clone --depth 1 https://github.com/google/AFL.git
+RUN git clone --depth 1  git://code.qt.io/qt/qtqa.git
+RUN git clone --depth 1  https://github.com/google/AFL.git
 COPY build.sh $SRC/

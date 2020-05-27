@@ -18,7 +18,7 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER cmeister2@gmail.com
 
 # libssh2 at revision 9662c96 with fuzzer changes on top.
-RUN git clone --depth 1 -b cmeister2/ossfuzz_9662c96 https://github.com/cmeister2/libssh2.git /src/libssh2
+RUN git clone --depth 1  -b cmeister2/ossfuzz_9662c96 https://github.com/cmeister2/libssh2.git /src/libssh2
 
 WORKDIR $SRC/libssh2
 COPY build.sh $SRC/

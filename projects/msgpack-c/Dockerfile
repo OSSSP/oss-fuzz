@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER chriswwolfe@gmail.com
 RUN apt-get update && apt-get install -y cmake
-RUN git clone --depth 1 https://github.com/msgpack/msgpack-c.git msgpack-c
+RUN git clone --depth 1  https://github.com/msgpack/msgpack-c.git msgpack-c
 WORKDIR msgpack-c
 COPY build.sh $SRC/

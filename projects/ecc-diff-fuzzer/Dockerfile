@@ -20,16 +20,16 @@ RUN apt-get update && apt-get install -y make cmake bzip2 autoconf automake gett
 RUN rustup target add i686-unknown-linux-gnu
 RUN npm install -g browserify
 RUN npm install elliptic
-RUN git clone --depth 1 https://github.com/horhof/quickjs quickjs
-RUN git clone --depth 1 https://github.com/catenacyber/elliptic-curve-differential-fuzzer.git ecfuzzer
-RUN git clone --recursive --depth 1 https://github.com/ARMmbed/mbedtls.git mbedtls
-RUN git clone --depth 1 https://github.com/ANSSI-FR/libecc.git libecc
-RUN git clone --depth 1 https://github.com/openssl/openssl.git openssl
-RUN git clone --depth 1 git://git.gnupg.org/libgpg-error.git libgpg-error
-RUN git clone --depth 1 git://git.gnupg.org/libgcrypt.git gcrypt
-RUN git clone --depth 1 https://github.com/weidai11/cryptopp cryptopp
+RUN git clone --depth 1  https://github.com/horhof/quickjs quickjs
+RUN git clone --depth 1  https://github.com/catenacyber/elliptic-curve-differential-fuzzer.git ecfuzzer
+RUN git clone --depth 1  --recursive  https://github.com/ARMmbed/mbedtls.git mbedtls
+RUN git clone --depth 1  https://github.com/ANSSI-FR/libecc.git libecc
+RUN git clone --depth 1  https://github.com/openssl/openssl.git openssl
+RUN git clone --depth 1  git://git.gnupg.org/libgpg-error.git libgpg-error
+RUN git clone --depth 1  git://git.gnupg.org/libgcrypt.git gcrypt
+RUN git clone --depth 1  https://github.com/weidai11/cryptopp cryptopp
 ADD https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2 gmp-6.1.2.tar.bz2
-RUN git clone --depth 1 https://github.com/gnutls/nettle.git nettle
-RUN git clone --depth 1 https://github.com/randombit/botan.git botan
+RUN git clone --depth 1  https://github.com/gnutls/nettle.git nettle
+RUN git clone --depth 1  https://github.com/randombit/botan.git botan
 WORKDIR $SRC/
 COPY build.sh $SRC/

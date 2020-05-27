@@ -19,21 +19,21 @@ MAINTAINER paul.l.kehrer@gmail.com
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y make autoconf automake libtool pkg-config cmake nasm autopoint po4a libc6:i386 libc6-dev:i386
-RUN git clone --depth 1 https://github.com/imagemagick/imagemagick
-RUN git clone --depth 1 https://gitlab.com/libtiff/libtiff
-RUN git clone --depth 1 https://github.com/strukturag/libde265
-RUN git clone --depth 1 https://github.com/strukturag/libheif
-RUN git clone --depth 1 https://github.com/uclouvain/openjpeg
-RUN git clone --depth 1 https://github.com/webmproject/libwebp
-RUN git clone --depth 1 https://github.com/madler/zlib
-RUN git clone --depth 1 https://github.com/libjpeg-turbo/libjpeg-turbo
-RUN git clone --depth 1 https://git.savannah.nongnu.org/r/freetype/freetype2
-RUN git clone --depth 1 https://github.com/xz-mirror/xz
-RUN git clone --depth 1 https://github.com/libraw/libraw
-RUN git clone --depth 1 https://github.com/pnggroup/libpng
-RUN git clone --depth 1 https://github.com/mm2/Little-CMS
+RUN git clone --depth 1  https://github.com/imagemagick/imagemagick
+RUN git clone --depth 1  https://gitlab.com/libtiff/libtiff
+RUN git clone --depth 1  https://github.com/strukturag/libde265
+RUN git clone --depth 1  https://github.com/strukturag/libheif
+RUN git clone --depth 1  https://github.com/uclouvain/openjpeg
+RUN git clone --depth 1  https://github.com/webmproject/libwebp
+RUN git clone --depth 1  https://github.com/madler/zlib
+RUN git clone --depth 1  https://github.com/libjpeg-turbo/libjpeg-turbo
+RUN git clone --depth 1  https://git.savannah.nongnu.org/r/freetype/freetype2
+RUN git clone --depth 1  https://github.com/xz-mirror/xz
+RUN git clone --depth 1  https://github.com/libraw/libraw
+RUN git clone --depth 1  https://github.com/pnggroup/libpng
+RUN git clone --depth 1  https://github.com/mm2/Little-CMS
 RUN svn export https://github.com/mozillasecurity/fuzzdata.git/trunk/samples/heic heic_corpus
-RUN git clone --depth 1 https://gitlab.com/federicomenaquintero/bzip2.git
+RUN git clone --depth 1  https://gitlab.com/federicomenaquintero/bzip2.git
 ADD https://lcamtuf.coredump.cx/afl/demo/afl_testcases.tgz afl_testcases.tgz
 WORKDIR imagemagick
 COPY build.sh $SRC/

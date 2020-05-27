@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y make autoconf automake libtool python r
 RUN wget -q -O - https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Linux-x86_64.sh > /tmp/install_cmake.sh && \
     cd /usr && bash /tmp/install_cmake.sh -- --skip-license && \
     rm /tmp/install_cmake.sh
-RUN git clone --depth 1 git://git.webkit.org/WebKit.git
+RUN git clone --depth 1  git://git.webkit.org/WebKit.git
 RUN wget https://github.com/unicode-org/icu/releases/download/release-66-1/icu4c-66_1-src.tgz && tar xzvf icu4c-66_1-src.tgz
 WORKDIR WebKit
 COPY build.sh $SRC

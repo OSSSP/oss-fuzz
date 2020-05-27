@@ -27,7 +27,7 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4
   
   
 # Get *your* source code here.
-RUN git clone --depth 1 --single-branch --branch master https://github.com/hyperledger/iroha.git
+RUN git clone --depth 1  --single-branch --branch master https://github.com/hyperledger/iroha.git
 
 WORKDIR iroha
 

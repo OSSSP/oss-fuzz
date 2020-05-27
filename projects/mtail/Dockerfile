@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER jaq@spacepants.org
 RUN mkdir -p github.com/google
-RUN git clone --depth 1 https://github.com/google/mtail github.com/google/mtail
+RUN git clone --depth 1  https://github.com/google/mtail github.com/google/mtail
 WORKDIR github.com/google/mtail
 COPY build.sh $SRC/

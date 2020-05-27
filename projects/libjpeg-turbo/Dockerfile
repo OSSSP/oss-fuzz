@@ -17,7 +17,7 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER alex.gaynor@gmail.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool nasm curl cmake
-RUN git clone --depth 1 https://github.com/libjpeg-turbo/libjpeg-turbo
+RUN git clone --depth 1  https://github.com/libjpeg-turbo/libjpeg-turbo
 
 RUN mkdir afl-testcases
 RUN cd afl-testcases/ && curl https://lcamtuf.coredump.cx/afl/demo/afl_testcases.tgz | tar -xz

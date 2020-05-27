@@ -21,7 +21,7 @@ MAINTAINER randy408@protonmail.com
 
 RUN apt-get update && apt-get install -y cmake
 
-RUN git clone --depth 1 https://github.com/DaveGamble/cJSON.git cjson
+RUN git clone --depth 1  https://github.com/DaveGamble/cJSON.git cjson
 
 WORKDIR cjson
 COPY build.sh $SRC/

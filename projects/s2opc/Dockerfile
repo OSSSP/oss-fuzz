@@ -19,8 +19,8 @@ MAINTAINER pab.systerel@gmail.com
 RUN apt-get update && apt-get install -y make cmake git curl
 
 # Sources and dependencies
-RUN git clone --depth 1 https://gitlab.com/systerel/S2OPC
-RUN git clone --depth 1 https://gitlab.com/systerel/S2OPC-fuzzing-data
+RUN git clone --depth 1  https://gitlab.com/systerel/S2OPC
+RUN git clone --depth 1  https://gitlab.com/systerel/S2OPC-fuzzing-data
 RUN curl -L https://tls.mbed.org/download/mbedtls-2.16.0-apache.tgz -o $SRC/mbedtls.tgz
 RUN curl -L https://github.com/libcheck/check/releases/download/0.12.0/check-0.12.0.tar.gz -o $SRC/check.tgz
 

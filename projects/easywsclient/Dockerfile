@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER dhbaird@gmail.com
 RUN apt-get update && apt-get install -y make autoconf automake libtool
-RUN git clone --depth 1 https://github.com/dhbaird/easywsclient easywsclient
+RUN git clone --depth 1  https://github.com/dhbaird/easywsclient easywsclient
 WORKDIR easywsclient
 COPY build.sh *.cpp $SRC/

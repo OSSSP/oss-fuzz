@@ -26,7 +26,7 @@ RUN dpkg --add-architecture i386 && \
     pip3 install meson ninja
 RUN curl --silent -O https://storage.googleapis.com/aom-test-data/fuzzer/dec_fuzzer_seed_corpus.zip
 RUN curl --silent -O https://jannau.net/dav1d_fuzzer_seed_corpus.zip
-RUN git clone --depth 1 https://code.videolan.org/videolan/dav1d.git dav1d
+RUN git clone --depth 1  https://code.videolan.org/videolan/dav1d.git dav1d
 WORKDIR dav1d
 COPY build.sh $SRC/
 COPY linux32.meson $SRC/

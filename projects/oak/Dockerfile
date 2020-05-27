@@ -35,6 +35,6 @@ RUN apt-get update && \
     rm bazel.deb bazel.sha256 && \
     apt-get clean
 
-RUN git clone --depth 1 https://github.com/project-oak/oak oak
+RUN git clone --depth 1  https://github.com/project-oak/oak oak
 WORKDIR oak
 COPY build.sh $SRC/

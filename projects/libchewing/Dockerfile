@@ -18,6 +18,6 @@ FROM gcr.io/oss-fuzz-base/base-builder
 MAINTAINER kcwu@csie.org
 RUN apt-get update && apt-get install -y make autoconf automake libtool texinfo
 
-RUN git clone --depth 1 https://github.com/chewing/libchewing.git
+RUN git clone --depth 1  https://github.com/chewing/libchewing.git
 WORKDIR libchewing
 COPY build.sh chewing_fuzzer_common.[ch] chewing_*_fuzzer.c $SRC/

@@ -19,6 +19,6 @@ MAINTAINER gmelman1@gmail.com
 
 RUN apt-get update && apt-get install --yes cmake
 
-RUN git clone --depth 1 https://github.com/gabime/spdlog.git
+RUN git clone --depth 1  https://github.com/gabime/spdlog.git
 WORKDIR spdlog
 COPY build.sh log_fuzzer.cc $SRC/

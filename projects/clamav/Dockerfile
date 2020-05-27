@@ -20,8 +20,8 @@ RUN apt-get update && apt-get install -y \
     flex bison \
     libssl-dev \
     libcurl4-openssl-dev
-RUN git clone --depth 1 https://github.com/Cisco-Talos/clamav-devel.git
-RUN git clone --depth 1 https://github.com/Cisco-Talos/clamav-fuzz-corpus.git
+RUN git clone --depth 1  https://github.com/Cisco-Talos/clamav-devel.git
+RUN git clone --depth 1  https://github.com/Cisco-Talos/clamav-fuzz-corpus.git
 
 WORKDIR clamav-devel
 COPY build.sh $SRC/

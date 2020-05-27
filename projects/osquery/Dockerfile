@@ -36,7 +36,7 @@ RUN wget -q https://github.com/Kitware/CMake/releases/download/v3.14.6/cmake-3.1
  && tar xf cmake-3.14.6-Linux-x86_64.tar.gz -C /usr/local --strip 1 \
  && rm cmake-3.14.6-Linux-x86_64.tar.gz
 
-RUN git clone --depth 1 https://github.com/osquery/osquery osquery
+RUN git clone --depth 1  https://github.com/osquery/osquery osquery
 
 WORKDIR osquery
 COPY build.sh $SRC/

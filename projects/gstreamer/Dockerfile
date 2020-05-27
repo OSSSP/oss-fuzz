@@ -30,11 +30,11 @@ RUN sed -i '/^#\sdeb-src /s/^#//' "/etc/apt/sources.list" && \
 ADD https://ftp.gnome.org/pub/gnome/sources/glib/2.64/glib-2.64.2.tar.xz $SRC
 
 # Checkout all development repositories
-#RUN for i in orc  gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav; do git clone --depth 1 --recursive https://anongit.freedesktop.org/git/gstreamer/$i $i; done  
+#RUN for i in orc  gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav; do git clone --depth 1  --recursive https://anongit.freedesktop.org/git/gstreamer/$i $i; done  
 RUN \
-  git clone --depth 1 --recursive https://gitlab.freedesktop.org/gstreamer/gstreamer.git gstreamer && \
-  git clone --depth 1 --recursive https://gitlab.freedesktop.org/gstreamer/gst-plugins-base.git gst-plugins-base && \
-  git clone --depth 1 --recursive https://gitlab.freedesktop.org/gstreamer/gst-ci.git gst-ci
+  git clone --depth 1  --recursive https://gitlab.freedesktop.org/gstreamer/gstreamer.git gstreamer && \
+  git clone --depth 1  --recursive https://gitlab.freedesktop.org/gstreamer/gst-plugins-base.git gst-plugins-base && \
+  git clone --depth 1  --recursive https://gitlab.freedesktop.org/gstreamer/gst-ci.git gst-ci
 
 ADD https://people.freedesktop.org/~bilboed/gst-discoverer_seed_corpus.zip $SRC
 

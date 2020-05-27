@@ -31,6 +31,6 @@ RUN apt-get update && \
         udev \
         && \
     pip3 install meson ninja
-RUN git clone --depth 1 https://github.com/systemd/casync casync
+RUN git clone --depth 1  https://github.com/systemd/casync casync
 WORKDIR casync
 COPY build.sh $SRC/

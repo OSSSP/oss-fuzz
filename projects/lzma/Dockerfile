@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y \
 	libtool \
 	make
 
-RUN git clone \
-	--depth 1 \
+RUN git clone --depth 1  \
+	 \
 	--branch master \
 	https://github.com/fancycode/lzma-fuzz.git \
 	lzma-fuzz

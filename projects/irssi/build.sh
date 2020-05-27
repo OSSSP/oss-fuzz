@@ -43,8 +43,8 @@ meson "$BUILD" -Dstatic-dependency=yes -Dinstall-glib=force \
 ninja -C "$BUILD" -v "${fuzz_targets[@]}"
 ( cd "$BUILD" && mv "${fuzz_targets[@]}" "$OUT" )
 
-git clone --depth 1 https://github.com/irssi-import/themes         theme-load-fuzz_corpus
-git clone --depth 1 https://github.com/irssi/irssi-fuzzing-corpora
+git clone --depth 1  https://github.com/irssi-import/themes         theme-load-fuzz_corpus
+git clone --depth 1  https://github.com/irssi/irssi-fuzzing-corpora
 
 find theme-load-fuzz_corpus -mindepth 1 -maxdepth 1 \( -type d -o \! -name \*.theme \) -exec rm -fr {} +
 

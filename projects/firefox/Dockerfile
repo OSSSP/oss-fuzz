@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
   libstdc++6
-RUN git clone --depth 1 https://github.com/mozilla/gecko-dev mozilla-central
-RUN git clone --depth 1 https://github.com/mozillasecurity/fuzzdata
+RUN git clone --depth 1  https://github.com/mozilla/gecko-dev mozilla-central
+RUN git clone --depth 1  https://github.com/mozillasecurity/fuzzdata
 WORKDIR mozilla-central
 COPY build.sh target.c *.options mozconfig.* $SRC/

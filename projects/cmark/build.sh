@@ -26,7 +26,7 @@ cp $SRC/cmark/test/fuzzing_dictionary $OUT/cmark.dict
 mkdir -p corpus
 cp $SRC/cmark/test/afl_test_cases/* corpus
 
-git clone --depth 1 https://github.com/michelf/mdtest.git mdtest
+git clone --depth 1  https://github.com/michelf/mdtest.git mdtest
 find mdtest/*.mdtest -type f -name '*.text' | while read in_file
 do
   # Genreate unique name for each input...

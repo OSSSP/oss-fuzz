@@ -38,6 +38,6 @@ RUN cd $SRC && \
     ./bootstrap.sh --with-toolset=clang --with-libraries=serialization,system,iostreams,regex && \
     ./b2 -q -j2 toolset=clang cxxflags="-fPIC $CXXFLAGS $CXXFLAGS_EXTRA" link=static install
 
-RUN git clone --depth 1 https://github.com/rdkit/rdkit.git $SRC/rdkit
+RUN git clone --depth 1  https://github.com/rdkit/rdkit.git $SRC/rdkit
 WORKDIR $SRC/rdkit
 COPY build.sh $SRC/

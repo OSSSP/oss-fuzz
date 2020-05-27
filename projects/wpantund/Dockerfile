@@ -31,6 +31,6 @@ RUN apt-get -y update \
 
 COPY build.sh *.options $SRC/
 
-RUN git clone --depth 1 https://github.com/openthread/wpantund
+RUN git clone --depth 1  https://github.com/openthread/wpantund
 
 WORKDIR wpantund

@@ -22,7 +22,7 @@ MAINTAINER davidwg@fb.com
 RUN apt-get update && apt-get install -y cmake curl
 
 # get libra
-RUN git clone --depth 1 https://github.com/libra/libra $SRC/libra
+RUN git clone --depth 1  https://github.com/libra/libra $SRC/libra
 WORKDIR $SRC/libra
 
 # building script for fuzzers

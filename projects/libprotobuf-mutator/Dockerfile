@@ -19,7 +19,7 @@ MAINTAINER vitalybuka@chromium.org
 RUN apt-get update && apt-get install -y make autoconf automake libtool pkg-config cmake \
     ninja-build liblzma-dev libz-dev docbook2x
 
-RUN git clone --depth 1  https://github.com/google/libprotobuf-mutator.git
+RUN git clone --depth 1   https://github.com/google/libprotobuf-mutator.git
 WORKDIR libprotobuf-mutator
 
 COPY build.sh  *.dict *.options $SRC/

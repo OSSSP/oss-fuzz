@@ -154,6 +154,6 @@ RUN apt-get install -y \
 RUN apt-get install patchelf
 
 # Fetch source and copy over files
-RUN git clone --depth 1 https://github.com/facebook/proxygen.git proxygen
+RUN git clone --depth 1  https://github.com/facebook/proxygen.git proxygen
 WORKDIR proxygen
 COPY build.sh $SRC/

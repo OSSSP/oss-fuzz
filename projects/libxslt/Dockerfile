@@ -22,7 +22,7 @@ MAINTAINER wellnhofer@aevum.de
 RUN apt-get update && apt-get install -y --no-install-recommends \
     make autoconf automake libtool pkg-config \
     libgcrypt-dev
-RUN git clone --depth 1 https://gitlab.gnome.org/GNOME/libxml2.git
-RUN git clone --depth 1 https://gitlab.gnome.org/GNOME/libxslt.git
+RUN git clone --depth 1  https://gitlab.gnome.org/GNOME/libxml2.git
+RUN git clone --depth 1  https://gitlab.gnome.org/GNOME/libxslt.git
 WORKDIR libxslt
 COPY build.sh $SRC/

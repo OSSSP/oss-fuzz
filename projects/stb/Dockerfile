@@ -21,7 +21,7 @@ RUN apt-get update && \
 
 MAINTAINER randy408@protonmail.com
 
-RUN git clone --depth 1 https://github.com/nothings/stb.git
+RUN git clone --depth 1  https://github.com/nothings/stb.git
 
 RUN wget -O $SRC/stb/gif.tar.gz https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/imagetestsuite/imagetestsuite-gif-1.00.tar.gz
 RUN wget -O $SRC/stb/jpg.tar.gz https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/imagetestsuite/imagetestsuite-jpg-1.00.tar.gz

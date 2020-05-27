@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install --yes cmake
 ADD https://github.com/Kitware/CMake/releases/download/v3.14.3/cmake-3.14.3-Linux-x86_64.tar.gz $WORK
 RUN cd $WORK && tar -xzf cmake-3.14.3-Linux-x86_64.tar.gz && rm cmake-3.14.3-Linux-x86_64.tar.gz
 
-RUN git clone --depth 1 https://github.com/libical/libical.git
+RUN git clone --depth 1  https://github.com/libical/libical.git
 COPY build.sh $SRC
 COPY libical_fuzzer.cc $SRC
 WORKDIR libical

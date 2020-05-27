@@ -20,11 +20,11 @@ RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y make autoconf automake libtool g++ curl cmake sqlite3 pkg-config
 
-RUN git clone --depth 1 https://github.com/OSGeo/gdal gdal
+RUN git clone --depth 1  https://github.com/OSGeo/gdal gdal
 
-RUN git clone --depth 1 https://github.com/OSGeo/proj.4 gdal/proj
+RUN git clone --depth 1  https://github.com/OSGeo/proj.4 gdal/proj
 
-RUN git clone --depth 1 https://github.com/curl/curl.git gdal/curl
+RUN git clone --depth 1  https://github.com/curl/curl.git gdal/curl
 
 COPY NC4_put_propattr_leak_fix.patch libnetcdf_fix_undefined_left_shift_in_ncx_get_size_t.patch $SRC/
 
@@ -38,7 +38,7 @@ RUN curl https://src.fedoraproject.org/lookaside/pkgs/netcdf/netcdf-4.4.1.1.tar.
     patch -p0 < $SRC/libnetcdf_fix_undefined_left_shift_in_ncx_get_size_t.patch && \
     cd ../..
 
-RUN git clone --depth 1 https://anongit.freedesktop.org/git/poppler/poppler.git gdal/poppler
+RUN git clone --depth 1  https://anongit.freedesktop.org/git/poppler/poppler.git gdal/poppler
 
 RUN cp gdal/gdal/fuzzers/build.sh $SRC/
 

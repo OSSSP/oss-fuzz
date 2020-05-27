@@ -20,15 +20,15 @@ RUN apt-get update && apt-get install -y build-essential autoconf automake libto
 #TODO libmagic, liblzma, pcre and other optional libraries
 ADD https://www.tcpdump.org/release/libpcap-1.9.1.tar.gz libpcap-1.9.1.tar.gz
 ADD http://www.digip.org/jansson/releases/jansson-2.12.tar.gz jansson-2.12.tar.gz
-RUN git clone --depth=1 https://github.com/yaml/libyaml
+RUN git clone --depth 1  https://github.com/yaml/libyaml
 ADD https://github.com/lz4/lz4/archive/v1.9.2.tar.gz lz4-1.9.2.tar.gz
 
 ADD https://rules.emergingthreats.net/open/suricata/emerging.rules.zip emerging.rules.zip
 
 RUN cargo install --force cbindgen
 
-RUN git clone --depth 1 https://github.com/OISF/suricata.git suricata
-RUN git clone --depth 1 https://github.com/OISF/libhtp.git suricata/libhtp
-RUN git clone --depth 1 https://github.com/OISF/suricata-verify suricata-verify
+RUN git clone --depth 1  https://github.com/OISF/suricata.git suricata
+RUN git clone --depth 1  https://github.com/OISF/libhtp.git suricata/libhtp
+RUN git clone --depth 1  https://github.com/OISF/suricata-verify suricata-verify
 WORKDIR $SRC
 COPY build.sh $SRC/
